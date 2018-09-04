@@ -6,12 +6,148 @@
     <title>Abiodun Abdullateef </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
+    
+    <!-- Bootstrap -->
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page
+    via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/
+    html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/
+    respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
-    <header class="header">
-        
+    <header>
+        <div class="header-inner">
+            <img class="header-avatar" src="svg/Avatar.svg" alt="Lateef Avatar">
+            <div class="header-text">
+                <h1><span class="pink-text">AB</span>IODUN <span class="pink-text">AB</span>DULLATEEF</h1>
+                <p><em>Frontend Web Developer &amp; UI/UX Designer</em></p>
+                <ul class="nav-li">
+                    <li class="list-items"><a href="#services">Services</a></li>
+                    <li class="list-items"><a href="#portfolio">Portfolio</a></li>
+                    <li class="list-items"><a href="#about">About</a></li>
+                    <li class="list-items"><a href="#blog">Blog</li></a>
+                    <li class="list-items"><a href="#contact">Contact</li></a>
+                </ul>
+            </div>
+        </div>
     </header>
+    <main>
+        <section class="services" id="services">
+            <div class="parallax">
+                <div class="section-bg">
+                    <div class="services-inner">
+                        <h2><strong><span class="pink-text">WHAT</span> I DO</strong></h2>
+
+                        <!--Carousel-->
+
+                        <div id="myCarousel" classs="carousel slide" data-ride="carousel">
+                            <!--Indicators-->
+
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <!--Wrapper for slides-->
+                            <div class="Carousel-inner">
+                                <div class="item-active">
+                                     <img src="svg/Web Development.svg" width="810px">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>   
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <h2><strong><span class="pink-text">PO</span>RTFOLIO</strong></h2>
+            <div class="folio-container">
+                <div class="folios">
+                    <div class="img-nhd">
+                        <img src="img/pixel-site.png" class="fli-img">
+                        <div class="det-hd">
+                            <h2>Pixel Art Maker</h2>
+                        </div>
+                    </div>
+                    <p class="det-txt">
+                        The Pixel Art Maker is an online pixel editor to help you make pixel art easily. 
+                        This was created as a project for the Google Challenge Scholarship. 
+                        It was created in HTML, CSS, JavaScript and jQuery.
+                        <a href="https://yawmiej.github.io/pixel-art-maker"><button type="button" class="link-btn">Visit Site</button></a>
+                    </p>
+                </div>
+            </div>
+            <div class="folios">
+                <div class="img-nhd">
+                    <img src="img/portfolio-site.png" class="fli-img">
+                    <div class="det-hd">
+                        <h2>Portfolio Site</h2>
+                    </div>
+                </div>
+                <p class="det-txt">
+                    A portfolio website is an essential component of a developer or designer's CV.
+                    it showcase his previous works for potential clients or employers.
+                </p>
+            </div>
+        </section>
+
+        <!--Social Media icons -->
+        <div class="fxd-icns">
+            <div class="social-icons">
+                <!--facebook-->
+                <a href="https://facebook.com/lateef.a.yawmie">    
+                    <div class="soc-icn">   
+                        <img src="svg/facebook-letter-logo.svg" class="soc-img" alt="facebook">
+                    </div>
+                </a>
+                <!--twitter-->
+                <a href="https://www.twitter.com/Yellow_codes">
+                    <div class="soc-icn">
+                        <img src="svg/twitter-logo.svg" class="soc-img" alt="twitter">
+                    </div>
+                </a>
+                <a href="https://www.github.com/yawmiej">
+                    <div class="soc-icn">
+                        <img src="svg/github-icon.svg" class="soc-img" alt="github">
+                    </div>
+                </a>
+                <!--googleplus-->
+                <a href="https://www.google.com">
+                    <div class="soc-icn">
+                        <img src="svg/Google-plus.svg" class="soc-img" alt="google+">
+                    </div>
+                </a>
+                <!--LinkedIN-->
+                <a href="https://www.linkedin.com">
+                    <div class="soc-icn">
+                        <img src="svg/linkedin-logo.svg" class="soc-img" alt="linkedin">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--For whatsapp contacting-->
+        <div class="whtsp-icon fxd-icns">
+            <a href="https://api.whatsapp.com/send?phone=+2348133318627&text=Hi Abdullateef!">
+                <img src="svg/Whatsapp.svg" alt="whatsapp" class="whatsp">
+            </a>
+        </div>
+    </main>
+     
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
