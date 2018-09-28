@@ -60,7 +60,7 @@ header{
 
 .header-inner{
   margin: 0;
-  height: 10em;
+  height: 7em;
   background-color: rgb(7, 9, 29, 0.78);
   color: #fff;
   padding: 1em;
@@ -69,9 +69,8 @@ header{
 
 
 .header-avatar{
-  width: 8em;
+  width: 5em;
   float: left;
-
 }
 
 
@@ -83,51 +82,33 @@ header{
 
 
 .header-text > h1{
-  font-size: 2.5em;
+  font-size: 1.3em;
+}
+
+
+.header-text > p{
+  font-size: 0.8em;
 }
 
 /*navigation*/
 
-.nav-li{
-  margin: 1em 0 0;
-  padding: 0;
-  list-style: none;
-  float: right;
-  top: 60px;
-  right: 10px;
-  display: block;
-}
-
-
-.list-items{
-  display: inline-block;
-  padding: 0.3em 1.2em;
-  margin: 0 0.6em;
-}
-
-
-.list-items > a{
-  color: #fff;
-  min-width: 48px;
-  text-decoration: none;
-}
-
-
-.list-items:hover{
-  background-color: #E8398D;
-  border-radius: 0.3em;
-  transition: 0.4s;
+.nav-list{
+  display: none;
 }
 
 
 /*Main*/
 
-main{
+.main{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
 }
-/*service section style*/
 
+
+/*All section*/
 section{
   margin: 0;
   padding: 0;
@@ -135,138 +116,199 @@ section{
 }
 
 
-section > h2{
+section h2{
   text-align: center;
-  margin: 1em 0 0;
+  font-size: 1.2em;
+  padding: 1em66 0 0;
+  margin: 0 0 0;
 }
-/*All section*/
 
 
+
+/*service section style*/
 .services{
   width: 100%;
-  height: 500px;
   margin: 0;
   padding: 0;
 }
 
-/*parallac scrolling*/
-.parallax{
-  background-image: url('svg/code-background.svg');
-  height: 100%;
-
-  /*creates parallax scrolling effect*/
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 
 .section-bg{
+  background-color: #f0f0f0;
   width: 100%;
-  height: 500px;
-  background-color:  rgb(7, 9, 29, 0.7);
+  padding: 0 0 2em;
 }
 
 
 .services-inner{
   margin: 0 auto;
-  width: 810px;
+  max-width: 810px;
 }
 
 
-.services-inner h2{
+.head-two{
   text-align: center;
-  color: #fff;
-  padding: 1em 0;
+  color: #000;
+  padding: 1em 0 0.5em;
 }
+
+    /*Slideshow Style*/
+
+/*Slideshow conatiner*/
+
+.slideshow-container{
+  max-width: 810px;
+  position: relative;
+}
+
+/*Hide the images by default*/
+
+.mySlides{
+  display: none;
+}
+
+
+/*Next & previous button*/
+
+.prev,
+.next{
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin: -22px 0 0;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/*move the next button to the right*/
+
+
+.next{
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+
+.prev:hover,
+.next:hover{
+  background-color: rgba(0,0,0,0.6)
+}
+
+
+.cap-text{
+  color: #fff;
+  font-size: 1em;
+  font-weight: 1000;
+  padding: 8px 12px;
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+
+.number-text{
+  color: #f2f2f2;
+  font-size: 1em;
+  padding: absolute;
+  position: absolute;
+  top: 0;
+  left: 2%;
+}
+
+
+/*slide indicator*/
+
+
+.dots{
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active,
+.dot:hover{
+  background-color: #717171;
+}
+
+
+/*fade animation*/
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; 
+}
+
+
+@-webkit-keyframes fade{
+  from{ opacity: 0.4 }
+  to { opacity: 1}
+}
+
+
+@keyframes fade{
+  from{ opacity: 0.4 }
+  to { opacity: 1}
+}
+/* End of slideshow style*/
 
 
 /*social media icon: fixed to left bottom of screen*/
 
-.fxd-icns{
-  position: fixed;
-}
 
 
-.social-icons{
-  position: absolute;
-  bottom: 450px;
-  left: 0;
-}
-
-
-.soc-icn{
-  width: 30px;
-  height: 30px;
-  padding: 0.2em;
-  margin: 0 0 1px;
-  background-color: rgb(7, 9, 29);
-}
-
-
-.soc-icn:hover{
-  width: 60px;
-  background-color: #E8398D;
-  padding: 0.2em 0.2em 0.2em 2.2em;
-  transition: 0.4s;
-}
-
-
-.soc-img{
-  width: 20px;
-  height: 20px;
-}
-
-
-.whtsp-icon{
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-}
-
-
-.whatsp{
-  width: 50px;
-  height: 50px;
-}
-
-.whatsp:hover{
-  width: 55px;
-  height: 55px;
-  transition: 0.4s;
-}
-
+/*portfolio section with flex display*/
 
 .folio-container{
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  margin: 2em 4em;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin: 2em auto;
 }
 
 
-.folios{
-  width: 35%;
+.folio-card{
+  width: 250px;
   flex: 0 0 auto;
-  margin: 0 2em 0 0;
+  margin: 0 auto 1em;
   display: inline-block;
 }
 
 
-.img-nhd{
+.card-content{
   position: relative;
   border: 1px solid rgb(0, 0, 0, 0.5);
-  padding: 0.3em 0 0;
 }
 
 
-.fli-img{
+.content-image{
   width: 100%;
+  height: 200px;
 }
 
 
-.det-hd{
+.content-head{
   width: 100%;
   padding: 1.5em;
   background-color: rgb(0, 0, 0, 0.5);
@@ -283,17 +325,439 @@ section > h2{
 }
 
 
-.link-btn{
-  width: 10em;
-  height: 2em;
+.butn{
   background-color: #E8398D;
   border: none;
   border-radius: 5px;
-  text-decoration: none;
+  cursor: pointer;
   color: #fff;
 }
 
 
-.link-btn:hover{
+.butn:hover{
   background-color: rgb(212, 17, 112);
+  box-shadow: 0 0 0.5em #c4c4c4;
+}
+
+
+.butn-link{
+  width: 10em;
+  height: 2em;
+  text-decoration: none;
+}
+
+/*contact section with with form*/
+
+
+.contact-section{
+  background-color:  rgb(7, 9, 29, 0.7);
+  padding: 2em;
+}
+
+
+.contact-section > h2{
+  color: #fff;
+  margin: 0 auto 1em;
+}
+
+
+.contact-form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.form-group{
+  width: 100%;
+  display: inline-block;
+}
+
+
+.form-group > label{
+  display: block;
+  padding: 0.5em 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+
+.form-input{
+  width: 100%;
+  height: 40px;
+  padding: 1em;
+  border: 0px;
+  border-radius: 0.5em;
+}
+
+
+textarea{
+  width: 100%;
+  height: 80px;
+  display: block;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+
+.butn-submit{
+  width: 200px;
+  height: 40px;
+  margin: 1em auto;
+  display: block;
+  font-size: 1.2em;
+}
+
+
+/*footer section*/
+.footer{
+  background-color: #E8398D;
+}
+
+
+
+.fixed-icons{
+  position: static;
+  order: 1;
+}
+
+
+.social-icons{
+  position: relative;
+  width: 210px;
+  margin: 0 auto;
+  padding: 1.2em 0;
+}
+
+
+.soc-icon{
+  display: inline-block;
+  padding: 0.5em;
+}
+
+
+.whatsp-icon{
+  order:-1;
+  display: none;
+}
+
+
+
+/*Responsiveness with media queries*/
+/*Media query for small devices*/
+@media screen and (min-width: 440px) and (max-width: 715px){
+  .header-inner{
+    height: 8em;
+  }
+
+
+  .header-text > h1{
+    font-size: 1.5em
+  }
+
+
+  .header-avatar{
+    width: 6em;
+  }
+
+
+  .header-text > p{
+    font-size: 0.9em;
+  }
+
+
+
+  .folio-card{
+    width: 350px;
+  }
+}
+
+
+/*Minor breakpoint at 620px & above for contact form*/
+@media screen and (min-width: 650px){
+  .header-text > h1{
+    font-size: 1.9em;
+  }
+
+
+  .header-text > p{
+    font-size: 1em;
+  }
+
+
+  .cap-text{
+    font-size: 1.3em;
+  }
+
+
+  .folio-card{
+    width: 400px;
+  }
+
+
+
+  .contact-form{
+    width: 600px;
+    margin: 0 auto;
+  }
+
+
+  .form-group{
+    width: 49%;
+    display: inline-block;
+  }
+
+
+  .full-group{
+    width: 100%;
+  }
+}
+
+
+
+/*Media Query for large devices*/
+@media screen and (min-width : 716px){
+  .header-inner{
+    height: 10em;
+  }
+  
+  
+  .header-avatar{
+    width: 8em;
+  }
+  
+
+  .header-text > h1{
+    font-size: 2em;
+  }
+  
+  
+  .header-text > p{
+    font-size: 1.1em;
+  }
+  
+  
+  .nav-list{
+    margin: 1em 0 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    top: 60px;
+    right: 10px;
+    display: block;
+  }
+  
+  
+  .list-items{
+    display: inline-block;
+    padding: 0.3em 1em;
+    margin: 0 0.6em;
+  }
+  
+  
+  .list-items > a{
+    color: #fff;
+    min-width: 48px;
+    text-decoration: none;
+  }
+  
+  
+  .list-items:hover{
+    background-color: #E8398D;
+    border-radius: 0.3em;
+    transition: 0.4s;
+  }
+
+
+  section h2{
+    font-size: 1.5em;
+  }
+
+
+  /*parallax scrolling*/
+  .parallax{
+    background-image: url('../svg/code-background.svg');
+
+    /*creates parallax scrolling effect*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .section-bg{
+    background-color:  rgb(7, 9, 29, 0.7);
+  }
+
+
+  .head-two{
+    color: #fff;
+  }
+
+
+  .fixed-icons{
+    position: fixed;
+  }
+  
+  
+  .social-icons{
+    position: absolute;
+    bottom: 900px;
+    left: 0;
+  }
+  
+  
+  .soc-icon{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0.2em;
+    margin: 0 0 1px;
+    background-color: rgb(7, 9, 29);
+  }
+  
+  /*outstretch the icons on hover*/
+  .soc-icon:hover{
+    width: 60px;
+    background-color: #E8398D;
+    padding: 0.2em 0.2em 0.2em 2.2em;
+    transition: 0.4s;
+  }
+  
+  
+  .soc-image{
+    width: 20px;
+    height: 20px;
+  }
+  
+  /*Whatsapp icon, fixed to the bottom right of the page*/
+  .whatsp-icon{
+    display: unset;
+    position: absolute;
+  }
+  
+  
+  .w-icon{
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+  }
+  
+  
+  .whatsp{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsp:hover{
+    width: 55px;
+    height: 55px;
+    transition: 0.4s;
+  }
+
+
+  .folio-card{
+    flex-wrap: nowrap;
+    width: 31%;
+  }
+}
+
+
+@media screen and (min-width: 1301px){
+  body{
+    width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+/*Minor Breakpoints*/
+
+/*breakpoint below 370px to reduce font-size and logo image*/
+@media screen and (max-width: 350px){
+  .header-avatar{
+    width: 4em;
+  }  
+
+  .header-text > h1{
+    font-size: 1.1em;
+  }
+
+
+  .header-text > p{
+    font-size: 0.7em;
+  }
+
+  .social-icons{
+    width: 70%;
+  }
+
+
+  .next,
+  .prev{
+    font-size: 0.8em;
+  }
+}
+
+
+@media screen and (max-width: 305px){
+  .header-inner{
+    height: 5.5em;
+  }
+
+
+  .header-avatar {
+    width: 25%;
+  }
+
+
+  .header-text > h1{
+    font-size: 5vw;
+  }
+
+
+  .header-text > p{
+    font-size: 3.2vw;
+  }
+
+
+  section h2{
+    font-size: 1em;
+  }
+
+
+  .number-text{
+    font-size: 0.7em;
+  }
+
+
+  .cap-text{
+    font-size: 0.7em;
+  }
+
+
+  .dot{
+    width: 10px;
+    height: 10px;
+  }
+
+
+  .butn-submit{
+    width: 100%;
+  }
+
+
+  .social-icons{
+    width: 90%;
+  }
+
+
+}
+
+
+@media screen and (min-width: 351px) and (max-width: 371px){
+  .header-avatar{
+    width: 4em;
+  }
 }

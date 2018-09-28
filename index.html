@@ -7,20 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     
-    <!-- Bootstrap -->
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page
-    via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/
-    html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/
-    respond.min.js"></script>
-    <![endif]-->
-    
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
@@ -30,7 +16,7 @@
             <div class="header-text">
                 <h1><span class="pink-text">AB</span>IODUN <span class="pink-text">AB</span>DULLATEEF</h1>
                 <p><em>Frontend Web Developer &amp; UI/UX Designer</em></p>
-                <ul class="nav-li">
+                <ul class="nav-list">
                     <li class="list-items"><a href="#services">Services</a></li>
                     <li class="list-items"><a href="#portfolio">Portfolio</a></li>
                     <li class="list-items"><a href="#about">About</a></li>
@@ -40,114 +26,170 @@
             </div>
         </div>
     </header>
-    <main>
+    
+    <main class="main">
         <section class="services" id="services">
+            <!--For fixed background image (parallax effect), two backgrounds are needed,
+                 one with an image and the other with an overlay (large screens only)-->
             <div class="parallax">
                 <div class="section-bg">
                     <div class="services-inner">
-                        <h2><strong><span class="pink-text">WHAT</span> I DO</strong></h2>
+                        <h2 class="head-two"><strong><span class="pink-text">SER</span>VICES</strong></h2>
 
-                        <!--Carousel-->
+                        <!--Slideshow container-->
+                        <div class="slideshow-container">
 
-                        <div id="myCarousel" classs="carousel slide" data-ride="carousel">
-                            <!--Indicators-->
-
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-
-                            <!--Wrapper for slides-->
-                            <div class="Carousel-inner">
-                                <div class="item-active">
-                                     <img src="svg/Web Development.svg" width="810px">
-                                </div>
+                            <!--Full width images with numbers and caption text-->
+                            <div class="mySlides fade">
+                                <div class="number-text"> 1/3</div>
+                                <img src="svg/Web Development.svg" style="width: 100%" alt="web development">
+                                <div><span class="cap-text">WEB DESIGN & DEVELOPMENT</span></div>
                             </div>
+
+                            <div class="mySlides fade">
+                                <div class="number-text"> 2/3</div>
+                                <img src="svg/ui designer.svg" style="width: 100%" alt="UI/UX design">
+                                <div><span class="cap-text">UI/UX DESIGN</span></div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="number-text"> 3/3</div>
+                                <img src="svg/Social Media Management.svg" style="width: 100%" alt="Social Media Management">
+                                <div><span class="cap-text">SOCIAL MEDIA MANAGEMENT</span></div>
+                            </div>
+
+                            <!--Next and previous buttons-->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <!--The dots/circles-->
+                            <div class="dots" style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+
                         </div>
 
-                    </div>   
+                    </div>                                           
                 </div>
             </div>
         </section>
         <section class="portfolio" id="portfolio">
-            <h2><strong><span class="pink-text">PO</span>RTFOLIO</strong></h2>
+            <h2><strong><span class="pink-text">POR</span>TFOLIO</strong></h2>
+
+            <!--Portfolio cards using flexbox and flexwrap-->
             <div class="folio-container">
-                <div class="folios">
-                    <div class="img-nhd">
-                        <img src="img/pixel-site.png" class="fli-img">
-                        <div class="det-hd">
+                <div class="folio-card">
+                    <div class="card-content">
+                        <img src="img/pixel-site.png" class="content-image" alt="pixel art maker">
+                        <div class="content-head">
                             <h2>Pixel Art Maker</h2>
                         </div>
                     </div>
                     <p class="det-txt">
                         The Pixel Art Maker is an online pixel editor to help you make pixel art easily. 
                         This was created as a project for the Google Challenge Scholarship. 
-                        It was created in HTML, CSS, JavaScript and jQuery.
-                        <a href="https://yawmiej.github.io/pixel-art-maker"><button type="button" class="link-btn">Visit Site</button></a>
+                        It was created in HTML, CSS, JavaScript and jQuery.<br><br>
+                        <a href="https://yawmiej.github.io/pixel-art-maker"><button type="button" class="butn butn-link">Visit Site</button></a>
+                    </p>
+                </div>
+                <div class="folio-card">
+                    <div class="card-content">
+                        <img src="img/portfolio-site.png" class="content-image" alt="portfolio site">
+                        <div class="content-head">
+                            <h2>Portfolio Site</h2>
+                        </div>
+                    </div>
+                    <p class="det-txt">
+                        A portfolio website is an essential component of a developer or designer's CV.
+                         it showcase his best works for potential clients or employers.
+                          it was built with basic HTML and CSS with a little JavaScript<br ><br>
+                        <a href="https://yawmiej.github.io/pixel-art-maker"><button type="button" class="butn butn-link">Visit Site</button></a>
+                    </p>
+                </div>
+                <div class="folio-card">
+                    <div class="card-content">
+                        <img src="img/pixel-site.png" class="content-image" alt="pixel art maker">
+                        <div class="content-head">
+                            <h2>Pixel Art Maker</h2>
+                        </div>
+                    </div>
+                    <p class="det-txt">
+                        The Pixel Art Maker is an online pixel editor to help you make pixel art easily. 
+                        This was created as a project for the Google Challenge Scholarship. 
+                        It was created in HTML, CSS, JavaScript and jQuery.<br><br>
+                        <a href="https://yawmiej.github.io/pixel-art-maker"><button type="button" class="butn butn-link">Visit Site</button></a>
                     </p>
                 </div>
             </div>
-            <div class="folios">
-                <div class="img-nhd">
-                    <img src="img/portfolio-site.png" class="fli-img">
-                    <div class="det-hd">
-                        <h2>Portfolio Site</h2>
-                    </div>
-                </div>
-                <p class="det-txt">
-                    A portfolio website is an essential component of a developer or designer's CV.
-                    it showcase his previous works for potential clients or employers.
-                </p>
-            </div>
         </section>
 
+        <section class="contact-section" id="contact">
+            <h2><strong><span class="pink-text">CON</span>TACT ME</strong></h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" class="form-input" placeholder="Enter Full Name" required> 
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-input" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group full-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter Text Here..." required></textarea>
+                </div>
+                <a href="mailto:yomlateef@yahoo.com"><input type="submit" class="butn butn-submit" id="submit" value="Contact"></a>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
         <!--Social Media icons -->
-        <div class="fxd-icns">
+        <div class="fixed-icons">
             <div class="social-icons">
                 <!--facebook-->
-                <a href="https://facebook.com/lateef.a.yawmie">    
-                    <div class="soc-icn">   
-                        <img src="svg/facebook-letter-logo.svg" class="soc-img" alt="facebook">
+                <a href="https://facebook.com/lateef.a.yawmie" target="blank">    
+                    <div class="soc-icon">   
+                        <img src="svg/facebook-letter-logo.svg" class="soc-image" alt="facebook">
                     </div>
                 </a>
                 <!--twitter-->
-                <a href="https://www.twitter.com/Yellow_codes">
-                    <div class="soc-icn">
-                        <img src="svg/twitter-logo.svg" class="soc-img" alt="twitter">
+                <a href="https://www.twitter.com/Yellow_codes" target="blank">
+                    <div class="soc-icon">
+                        <img src="svg/twitter-logo.svg" class="soc-image" alt="twitter">
                     </div>
                 </a>
-                <a href="https://www.github.com/yawmiej">
-                    <div class="soc-icn">
-                        <img src="svg/github-icon.svg" class="soc-img" alt="github">
+                <!--Github -->
+                <a href="https://www.github.com/yawmiej" target="blank">
+                    <div class="soc-icon">
+                        <img src="svg/github-icon.svg" class="soc-image" alt="github">
                     </div>
                 </a>
                 <!--googleplus-->
-                <a href="https://www.google.com">
-                    <div class="soc-icn">
-                        <img src="svg/Google-plus.svg" class="soc-img" alt="google+">
+                <a href="https://www.google.com" target="blank">
+                    <div class="soc-icon">
+                        <img src="svg/Google-plus.svg" class="soc-image" alt="google+">
                     </div>
                 </a>
                 <!--LinkedIN-->
-                <a href="https://www.linkedin.com">
-                    <div class="soc-icn">
-                        <img src="svg/linkedin-logo.svg" class="soc-img" alt="linkedin">
+                <a href="https://www.linkedin.com" target="blank">
+                    <div class="soc-icon">
+                        <img src="svg/linkedin-logo.svg" class="soc-image" alt="linkedin">
                     </div>
                 </a>
             </div>
         </div>
-
         <!--For whatsapp contacting-->
-        <div class="whtsp-icon fxd-icns">
-            <a href="https://api.whatsapp.com/send?phone=+2348133318627&text=Hi Abdullateef!">
-                <img src="svg/Whatsapp.svg" alt="whatsapp" class="whatsp">
-            </a>
+        <div class="whatsp-icon">
+            <div class="w-icon">
+                <a href="https://api.whatsapp.com/send?phone=+2348133318627&text=Hi Abdullateef!">
+                    <img src="svg/Whatsapp.svg" alt="whatsapp" class="whatsp">
+                </a>
+            </div>
         </div>
-    </main>
+    </footer>
      
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
