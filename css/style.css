@@ -70,6 +70,8 @@ header{
 
 .header-avatar{
   width: 5em;
+  border: 0;
+  border-radius: 50%;
   float: left;
 }
 

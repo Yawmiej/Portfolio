@@ -6,6 +6,9 @@ function plusSlides(n){
     showSlides(slideIndex += n);
 }
 
+setInterval(function (){
+    showSlides(slideIndex += 1)
+}, 4000);
 
 //Thumbnail image controls
 function currentSlide(n){
@@ -37,5 +40,4 @@ function showSlides(n){
     }
     slides[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].className += ' active';
-    setTimeout(showSlides, 3000);
 }
